@@ -1,4 +1,4 @@
-#                                      CÓDIGO COM ERROS                           
+#                                      CÓDIGO COM ERROS
 # ENTRADA DE DADOS
 cliente = input("Qual é seu nome? ")
 
@@ -17,11 +17,11 @@ total_item2 = qtd2 * item2
 total_item3 = qtd3 * item3
 
 subtotal = total_item1 + total_item2 + total_item3
-imposto = subtotal * 0.10
+imposto = subtotal * 0.10  # calcula o imposto de 10% sobre o subtotal
 
 # DESCONTO
 desconto_cupom = int(input("Você tem um cupom de desconto? (Digite o percentual ou 0): "))
-desconto = subtotal * (desconto_cupom / 100)
+desconto = subtotal * (desconto_cupom / 100)  # calcula o desconto baseado no percentual fornecido
 
 # TOTAL FINAL
 total = subtotal + imposto - desconto
@@ -40,9 +40,9 @@ print(separador)
 print(f" Subtotal:      R$ {subtotal:.2f}")
 print(f" Imposto (10%): R$ {imposto:.2f}")
 
-if desconto_cupom > 0:
+if desconto_cupom > 0:  # só exibe o desconto se houver um cupom válido (percentual > 0)
     print(f" Desconto ({desconto_cupom:.0f}%): -R$ {desconto:.2f}")
 
 print(linha)
-print(f" TOTAL:         R$ {round(total, 2):.2f}")
+print(f" TOTAL:         R$ {round(total, 2):.2f}")  # arredonda o total para 2 casas decimais para exibição em moeda
 print(linha)
